@@ -1,3 +1,4 @@
+import {myAlert} from "./warning.js";
 let userData = []
 let oneUser;
 const getRandomUser = async () => {
@@ -32,7 +33,8 @@ const addUser = (res) => {
   userData.push({firstname:res.name.first,lastname:res.name.last,email:res.email,cell:res.cell,picture:res.picture.medium})
 
   addStorage(userData)
-  //showAll(getStorage()) 
+  //showAll(getStorage())
+  myAlert("NEW USER ADDED!",3000) 
 }
 
 const show = (res) => {
